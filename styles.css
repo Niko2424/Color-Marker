@@ -24,21 +24,28 @@ h1 {
     background-color: rgba(255, 255, 255, 0.5);
     border-left: 10px double rgba(0, 0, 0, 0.75);
   }
-  
+  /* cap and sleeve are block alike elements. if display inline-block was not there
+  they would stack on top of each other like block */
   .cap, .sleeve {
     display: inline-block;
   }
-  
+  /*linear-gradient in background gives the 3D alike look, combines these 3 colors
+  and fades them in between, when no deg value is provided its set to 180deg defualt
+  the 2 side colors are darker than the middle color so it looks 3D
+  box-shadow X(side ways, left to right) Y(top to bottom, negative at top) blur radius, spread radius
+  alpha's value of 0 transparent, 1 means solid*/
   .red {
     background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
     box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
   }
-  
+  /*hexadecimal values of 00 means no intesity and FF means ful intensity. 0-9, A-F*/
   .green {
     background: linear-gradient(#55680D, #71F53E, #116C31);
     box-shadow: 0 0 20px 0 #3B7E20CC;
   }
-  
+  /*Hue values 0-360, 0,360 is red, 120 is green, 240 is blue.
+  Saturation is the intesity of the color, 0% no intesity gray alike, 100% strong intesity
+  Lightness with 0% being black 100% being white*/
   .blue {
     background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
     box-shadow: 0 0 20px 0 blue;
